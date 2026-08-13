@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>知途物流 MRS｜客戶落單頁</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+  font-family:"Noto Sans HK",system-ui,sans‑serif;
+  background:#f4f7fa;
+  color:#222;
+  line-height:1.7;
+  padding-bottom:60px;
+}
+.wrap{
+  max-width:720px;
+  margin:0 auto;
+  background:#ffffff;
+  min-height:100vh;
+}
+.top-header{
+  background:#253b52;
+  color:#fff;
+  text-align:center;
+  padding:28px 16px;
+}
+.top-header h1{
+  font-size:28px;
+}
+.slogan{
+  opacity:0.85;
+  margin-top:6px;
+  font-size:16px;
+}
+.content{
+  padding:24px 20px;
+}
+.section{
+  margin-bottom:32px;
+}
+h2{
+  font-size:20px;
+  border-left:5px solid #253b52;
+  padding-left:12px;
+  margin-bottom:16px;
+  color:#1f3042;
+}
+.price-table{
+  width:100%;
+  border-collapse:collapse;
+}
+.price-table th,.price-table td{
+  border:1px solid #dde3ec;
+  padding:12px 10px;
+}
+.price-table th{
+  background:#e9eef4;
+}
+.form-block{
+  background:#f3f6fa;
+  padding:20px 18px;
+  border-radius:10px;
+}
+.form-item{
+  margin-bottom:14px;
+}
+label{
+  display:block;
+  margin-bottom:4px;
+  font-weight:500;
+}
+input,select,textarea{
+  width:100%;
+  font-size:16px;
+  padding:11px 12px;
+  border:1px solid #cbd3dd;
+  border-radius:6px;
+  background:#fff;
+}
+.btn-whatsapp{
+  width:100%;
+  background:#25d366;
+  color:#000;
+  font-weight:bold;
+  border:none;
+  padding:14px;
+  font-size:17px;
+  border-radius:8px;
+  margin-top:10px;
+  cursor:pointer;
+}
+.info-note{
+  font-size:14px;
+  color:#555;
+  margin-top:8px;
+}
+ul.list-service{
+  padding-left:22px;
+}
+.promo-box{
+  background:#fff2cc;
+  padding:14px 16px;
+  border-radius:8px;
+  margin:16px 0;
+}
+@media(max-width:520px){
+  .top-header h1{font-size:22px;}
+  .content{padding:18px 14px;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top-header">
+    <h1>知途物流 Mile Route Service (MRS)</h1>
+    <div class="slogan">知客所需，穩途相送｜步兵專人直送</div>
+  </div>
+  <div class="content">
+
+    <div class="section">
+      <h2>我們嘅服務</h2>
+      <ul class="list-service">
+        <li>✅ 專人手提派送：蛋糕、鮮花、禮物，唔堆貨避免壓壞</li>
+        <li>✅ 營運材料代買上門（包裝、烘焙物料等）</li>
+        <li>✅ 同區急件速遞：緊急文件、中藥代取、鎖匙、手機急件</li>
+      </ul>
+      <div class="promo-box">
+        🎁 開業優惠：新客首單派送免費試送！
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>收費參考</h2>
+      <table class="price-table">
+        <tr>
+          <th>服務</th>
+          <th>價錢</th>
+        </tr>
+        <tr>
+          <td>觀塘同區貨品派送</td>
+          <td>HK$40起</td>
+        </tr>
+        <tr>
+          <td>港鐵沿線跨區派送</td>
+          <td>HK$60起</td>
+        </tr>
+        <tr>
+          <td>觀塘同區｜文件 / 中藥急件</td>
+          <td>HK$35起</td>
+        </tr>
+        <tr>
+          <td>材料代買服務</td>
+          <td>按路程、數量即時報價</td>
+        </tr>
+      </table>
+      <p class="info-note">備註：多點往返、大量貨物價錢會調整，WhatsApp會事前同你確認報價，無隱藏收費。</p>
+    </div>
+
+    <div class="section">
+      <h2>網上填寫訂單，一鍵發送到WhatsApp</h2>
+      <div class="form-block">
+        <div class="form-item">
+          <label>客戶姓名</label>
+          <input id="custName" placeholder="輸入你嘅名稱 / 公司名">
+        </div>
+        <div class="form-item">
+          <label>聯絡電話</label>
+          <input id="custTel" placeholder="聯絡電話">
+        </div>
+        <div class="form-item">
+          <label>揀選服務類別</label>
+          <select id="serviceType">
+            <option value="同區貨品派送（蛋糕/鮮花/貨物）">同區貨品派送（蛋糕/鮮花/貨物）</option>
+            <option value="跨區港鐵派送">跨區港鐵派送</option>
+            <option value="觀塘同區｜文件 / 中藥急件">觀塘同區｜文件 / 中藥急件</option>
+            <option value="營運材料代買上門">營運材料代買上門</option>
+          </select>
+        </div>
+        <div class="form-item">
+          <label>取件地址</label>
+          <textarea id="pickAddr" rows="2" placeholder="邊度取貨"></textarea>
+        </div>
+        <div class="form-item">
+          <label>送貨地址</label>
+          <textarea id="destAddr" rows="2" placeholder="送貨目的地"></textarea>
+        </div>
+        <div class="form-item">
+          <label>貨物內容備註（尺寸、數量、時間要求等）</label>
+          <textarea id="remark" rows="3" placeholder="例如：要今日盡快送、係蛋糕要小心擺放、中藥等"></textarea>
+        </div>
+
+        <button class="btn-whatsapp" onclick="sendOrder()">📱 確認，發送訂單去WhatsApp查詢報價</button>
+        <p class="info-note">按按鈕會自動生成訊息，跳轉WhatsApp，你可以再微調內容先發送。</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>服務備註</h2>
+      <ul class="list-service">
+        <li>代買、中藥代取需要先收款再執行服務</li>
+        <li>文件會使用防水袋，中藥雙層膠袋防滲漏</li>
+        <li>送貨完成會回傳簽收相片確認</li>
+        <li>營業範圍主力觀塘，覆蓋荃灣、葵青、荔枝角同港鐵沿線</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// 修改呢度填寫你自己嘅WhatsApp號碼，淨係數字，唔加+852
+const whatsappNumber = "96665209";
+
+function sendOrder(){
+  const name = document.getElementById('custName').value.trim();
+  const tel = document.getElementById('custTel').value.trim();
+  const service = document.getElementById('serviceType').value;
+  const pick = document.getElementById('pickAddr').value.trim();
+  const dest = document.getElementById('destAddr').value.trim();
+  const note = document.getElementById('remark').value.trim();
+
+  let msg = `【知途物流 MRS 網頁訂單查詢】\n`;
+  msg += `客戶姓名：${name}\n`;
+  msg += `聯絡電話：${tel}\n`;
+  msg += `服務類別：${service}\n`;
+  msg += `取件地址：${pick}\n`;
+  msg += `送貨地址：${dest}\n`;
+  msg += `備註：${note}\n\n`;
+  msg += `麻煩幫我確認價錢同可派送時間，多謝。`;
+
+  const url = `https://wa.me/852${whatsappNumber}?text=${encodeURIComponent(msg)}`;
+  window.open(url,"_blank");
+}
+</script>
+</body>
+</html>
